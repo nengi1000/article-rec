@@ -1,0 +1,54 @@
+
+body { background-color: black;}
+
+.paperbox
+ {
+    background-color: white;
+    border-radius: 22px;
+    width: 400px;
+    height: 260px;
+    margin: 60px auto auto 20px;
+    position: relative;
+    padding-top:60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.titlebox
+{
+    background-color: rgb(228, 13, 160);
+    width: 360px;
+    height: 80px;
+    position: absolute;
+    top: 40px ;
+    left: 58px;
+    text-align: center;
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 10px 12px;
+    background-color:  rgb(241, 185, 223);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s;    /* hober efct*/
+  }
+
+.btn:hover
+{
+    background-color: rgb(199, 101, 168);
+    transform: scale(1.08);
+     /* this to make biger on hover */
+}
+
+.btn:active
+{
+    transform: scale(1);
+}
+
+
+

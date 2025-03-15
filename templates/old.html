@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Older Articles </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='old.css') }}">
+</head>
+
+<body>
+
+    <a id="top"></a>
+    <h1>Previously Recomended Articles</h1>
+
+    <h2 > <a href="{{ url_for('home') }}">🔙Back to Home</a></h2>
+
+    {% if articles %}
+        <ul>
+            {% for article in articles %}
+                <li>
+                    <h2>{{ article.title }}</h2>
+                    <p><a href="{{ article.link }}" target="_blank">Read it here!</a></p>
+                    <p>Votes: {{ article.votes }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+
+        <p>No saved articles yet.</p>
+    {% endif %}
+
+    <h2 > <a href="{{ url_for('home') }}">🔙Back to Home</a> </h2 >
+    <h2 > <a href="#top"> ⬆️Back to top </a> </h2>
+
+</body>
+</html>

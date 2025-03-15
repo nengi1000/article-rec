@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="paperbox">
+        <h3>Hi, here's the most popular article on hacker news right now</h3>
+<!--        <h4>{{ title }}</h4>-->
+        <p><a href="{{ link }}" target="_blank">{{ title }}</a></p>
+        <p>It has {{ vote }} votes</p>
+
+        <h4> OR</h4>
+        <a href="{{ url_for('saved_articles') }}">
+            <button class = btn >Read Previous Articles</button>
+        </a>
+
+    </div>
+
+    <div class="titlebox">
+        <h2>  ♡ Read something cutie! ♡ </h2>
+    </div>
+</body>
+</html>
